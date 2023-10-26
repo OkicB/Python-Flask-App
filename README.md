@@ -1,0 +1,1 @@
+Experience a Python application powered by Flask, designed to seamlessly retrieve data from an external API, meticulously format it, and present the information in an elegant and stylized container box. Discover a user-friendly interface that effortlessly brings data to life.
