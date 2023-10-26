@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSON Data viewer for NASA API</title>
+        <style>
+            .box {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .entry {
+                border: 1px solid #ccc;
+                padding: 10px;
+                margin: 10px;
+                width: 30%;
+            }
+
+            .entry img {
+                max-width: 300px;
+                height: auto;
+            }
+
+            .highlight {
+                color: red;
+            }
+            @media (max-width: 1275px) {
+                .box {
+                    justify-content: center;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>JSON Data Viewer - NASA API</h1>
+        <div id="results" class="box"></div>
+        <script>
+            fetch("/nasa_data")
+                .then(response => response.json())
+                .then(data => {
+                    const results = data.results;
+
+                    const resultsContainer = document.getElementById("results");
+
+                    results.forEach(result => {
+                        const entry = document.createElement("div");
+                        entry.classList.add("entry");
+
+                        const image = document.createElement("img");
+                        image.src = result[10];
+                        image.alt = "Image";
+
+                        const title = document.createElement("h2");
+                        title.innerHTML = result[2];
+
+                        const description = document.createElement("p");
+                        description.innerHTML = result[3];
+
+                        entry.appendChild(image);
+                        entry.appendChild(title);
+                        entry.appendChild(description);
+
+                        resultsContainer.appendChild(entry);
+                    });
+                })
+                .catch(error => {
+                    console.error("Error fetching data:", error);
+                });
+        </script>
+    </body>
+</html>
