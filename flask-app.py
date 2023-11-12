@@ -7,7 +7,7 @@ app = Flask(__name__)
 def display_nasa_data():
     try:
         #since the API is free and open from NASA organisation, you should reach out to their page and request for your API, they will probably provide it immediately if you need for exercise.
-        api_url = "https://api.nasa.gov/techtransfer/patent/?engine&api_key=t1YcXQbB9AQs7hiAXw1xWUpZ1WcWp8ku0TZ7v4gn"
+        api_url = "YOUR_API_KEY"
         response = requests.get(api_url)
 
         if response.status_code == 200:
