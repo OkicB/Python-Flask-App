@@ -1,4 +1,4 @@
-# Welcome to our Python application!
+# Welcome to my Python application!
 
 Built with Flask, this application is designed to streamline the retrieval, formatting, and presentation of data from external APIs. Experience an intuitive and elegant user interface that brings data to life in a stylized container box.
 
