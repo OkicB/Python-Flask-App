@@ -32,7 +32,7 @@ Built with Flask, this application is designed to streamline the retrieval, form
 - **Flask:** Powering the backend to handle data retrieval and processing.
 - **Python:** The core programming language driving the application.
 
-## Getting Started
+## Getting Started!
 
 To get started with this application, follow these steps:
 
